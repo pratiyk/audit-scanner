@@ -20,6 +20,16 @@ Node.js and npm should be installed on your system.
  
 
 ## Demo:
+#### audit-scan
+
 ![Screenshot_20240708_180712](https://github.com/pratiyk/audit-scanner/assets/38837970/d34b163e-f5e6-4ebc-a192-0d7d274d3c65)
 
 ![retire-scan](https://github.com/pratiyk/audit-scanner/assets/38837970/23340df5-4833-4537-9563-5bfe1c1831ba)
+
+#### generate-pie-chart
+
+![image](https://github.com/user-attachments/assets/028738a4-c7bf-4eaa-816a-0de6eceb8a1f)
+
+![image](https://github.com/user-attachments/assets/0738c87b-4cdd-4a1e-9429-d26d7b5edc8c)
+
+
