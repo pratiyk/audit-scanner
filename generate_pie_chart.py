@@ -1,6 +1,5 @@
 import json
-import sys
-import os  
+import os
 from collections import Counter
 
 # Function to read JSON from a file
@@ -123,34 +122,34 @@ def generate_html_from_json(data, output_file):
 
 # Main function
 def main():
-    if len(sys.argv) != 3:
-        print("Usage: python generate_pie_chart.py <input_json_file> <output_html_file>")
-        sys.exit(1)
-
-    input_file = sys.argv[1]
-    output_file = sys.argv[2]
+    # Prompt user for input and output file paths
+    input_file = input("Enter the path to the input JSON file: ").strip()
+    output_file = input("Enter the path for the output HTML file: ").strip()
 
     # Ensure the output file path includes a filename
     if os.path.isdir(output_file):
         print(f"The specified output path '{output_file}' is a directory. Please provide a file path including a filename.")
-        sys.exit(1)
+        return
 
     # Read data from JSON file
     try:
         data = read_json_file(input_file)
     except ValueError as e:
         print(e)
-        sys.exit(1)
+        return
     
     # Extract severity counts from Retire.js scan results
     try:
         severity_counts = extract_severity_counts(data)
     except ValueError as e:
         print(e)
-        sys.exit(1)
+        return
     
     # Generate HTML file
-    generate_html_from_json(severity_counts, output_file)
+    try:
+        generate_html_from_json(severity_counts, output_file)
+    except IsADirectoryError as e:
+        print(e)
 
 # Run the main function
 if __name__ == "__main__":
