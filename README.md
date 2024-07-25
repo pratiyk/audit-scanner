@@ -28,7 +28,7 @@ Node.js and npm should be installed on your system.
 
 #### generate-pie-chart
 
-![image](https://github.com/user-attachments/assets/028738a4-c7bf-4eaa-816a-0de6eceb8a1f)
+![image](https://github.com/user-attachments/assets/7913cdc0-6176-4abd-869b-f89bf20c3bb9)
 
 ![image](https://github.com/user-attachments/assets/0738c87b-4cdd-4a1e-9429-d26d7b5edc8c)
 
