@@ -43,4 +43,11 @@ This Python script reads a Retire.js JSON output file, processes the vulnerabili
 
 ![image](https://github.com/user-attachments/assets/0738c87b-4cdd-4a1e-9429-d26d7b5edc8c)
 
+-----
+
+# Installation
+**Clone the Repository**:
+   ```bash
+   git clone https://github.com/pratiyk/audit-scanner
+
 
