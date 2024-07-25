@@ -1,4 +1,4 @@
-# audit-scan
+# retire-scan
 ## Overview:
 This script is designed to scan a specified file or directory for known vulnerabilities using Retire.js. It prompts the user for a path, checks if Retire.js is installed (installing it if necessary), and then runs a Retire.js scan on the provided path.
 
