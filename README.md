@@ -43,7 +43,8 @@ This Python script reads a Retire.js JSON output file, processes the vulnerabili
 
 ![image](https://github.com/user-attachments/assets/c5701e12-235b-4414-8bf3-1aacdd920144)
 
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/7cd86583-9e50-432a-a50a-a38477da29d2)
+
 
 
 
