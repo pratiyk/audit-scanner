@@ -119,6 +119,7 @@ def generate_html_from_json(severity_counts, vulnerabilities_by_severity, output
             .low-severity {{ border-left: 5px solid #28a745; }}
             .medium-severity {{ border-left: 5px solid #ffc107; }}
             .high-severity {{ border-left: 5px solid #dc3545; }}
+            .critical-severity {{ border-left: 5px solid #dc3545; }}
             th.library, td.library {{ width: 25%; }}
             th.severity, td.severity {{ width: 15%; }}
             th.summary, td.summary {{ width: 40%; }}
@@ -185,7 +186,10 @@ def generate_html_from_json(severity_counts, vulnerabilities_by_severity, output
                 .attr('fill', d => color(d.data.severity))
                 .attr("stroke", "white")
                 .style("stroke-width", "2px")
-                .style("opacity", 0.7);
+                .style("opacity", 0.7)
+                .on("click", function(event, d) {{
+                    window.location.hash = d.data.severity + "-severity";
+                }});
             
             // Add labels
             svg
@@ -201,7 +205,7 @@ def generate_html_from_json(severity_counts, vulnerabilities_by_severity, output
         
         <!-- Vulnerabilities Tables -->
         <div class="table-container">
-            <h2>Low Severity Vulnerabilities</h2>
+            <h2 id="low-severity">Low Severity Vulnerabilities</h2>
             <table class="low-severity">
                 <tr>
                     <th class="library">Library</th>
@@ -217,7 +221,7 @@ def generate_html_from_json(severity_counts, vulnerabilities_by_severity, output
                 ''' for vul in vulnerabilities_by_severity.get('low', []))}
             </table>
             
-            <h2>Medium Severity Vulnerabilities</h2>
+            <h2 id="medium-severity">Medium Severity Vulnerabilities</h2>
             <table class="medium-severity">
                 <tr>
                     <th class="library">Library</th>
@@ -233,7 +237,7 @@ def generate_html_from_json(severity_counts, vulnerabilities_by_severity, output
                 ''' for vul in vulnerabilities_by_severity.get('medium', []))}
             </table>
             
-            <h2>High Severity Vulnerabilities</h2>
+            <h2 id="high-severity">High Severity Vulnerabilities</h2>
             <table class="high-severity">
                 <tr>
                     <th class="library">Library</th>
@@ -249,7 +253,7 @@ def generate_html_from_json(severity_counts, vulnerabilities_by_severity, output
                 ''' for vul in vulnerabilities_by_severity.get('high', []))}
             </table>
             
-            <h2>Critical Severity Vulnerabilities</h2>
+            <h2 id="critical-severity">Critical Severity Vulnerabilities</h2>
             <table class="critical-severity">
                 <tr>
                     <th class="library">Library</th>
