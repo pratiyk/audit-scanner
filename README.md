@@ -28,7 +28,7 @@ Node.js and npm should be installed on your system.
 
 -------
 
-# generate-pie-chart
+# vulnerability-report-generator
 ## Overview:
 This Python script reads a Retire.js JSON output file, processes the vulnerabilities by severity, and generates an HTML file containing a pie chart visualizing the severity distribution using D3.js.
 
